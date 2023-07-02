@@ -9,7 +9,7 @@
 namespace Drupal\mymodule\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-
+use Drupal\Core\Cache;
 /**
  * This class is a multipurpose utility class.
  * it is used for testing simple markups,getAccountName function.  
@@ -48,11 +48,14 @@ class FirstController extends ControllerBase {
    *  A render array to display the hello message
    */
   public function showName() {
-    $user = \Drupal::currentUser();
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
     $userName = $user->getAccountName();
     return[
       '#type' => 'markup',
-      '#markup' => ('Hello '. $userName)
+      '#markup' => ('Hello '. $userName),
+      '#cache' => [
+        'tags' => $user->getCacheTags(),
+      ]
     ];
   }
 }
