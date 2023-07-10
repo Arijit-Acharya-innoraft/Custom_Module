@@ -5,12 +5,25 @@ namespace Drupal\mymodule\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * A basic form.
+ */
 class FirstForm extends FormBase {
   
   function getFormId() {
     return 'custom_form_id';
   }
 
+  /**
+   * Form constructor
+   * 
+   * @param array $form
+   *  An associative array containing the structure of the form.
+   * @param FormStateInterface $form_state
+   *  The current state of the form.
+   * @return array
+   *  The form structure.
+   */
   function buildForm(array $form, FormStateInterface $form_state) {
 
     $form['full_name'] = [
@@ -41,6 +54,9 @@ class FirstForm extends FormBase {
     return $form;
   }
 
+  /**
+   * {{@inheritdoc}}
+   */
   function validateForm(array &$form, FormStateInterface $form_state) {
     $publicDomains = [];
     $email =$form_state->getValue('email');
@@ -75,11 +91,14 @@ class FirstForm extends FormBase {
     }
   }
 
+  /**
+   * {{@inheritdoc}}
+   */
   function submitForm(array &$form, FormStateInterface $form_state){
 
     $this->messenger()->addStatus($this->t('Your form is submitted'));
-
   }
+
 }
 
 ?>
