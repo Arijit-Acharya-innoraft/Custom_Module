@@ -8,4 +8,3 @@ administer configform:
   title: Access configform's settings.
   description: Access the admin configform's setting page.
   restrict access: true
-  

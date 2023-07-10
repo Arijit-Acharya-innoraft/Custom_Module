@@ -4,5 +4,5 @@ type: 'module'
 core_version_requirement: ^10
 package: 'Custom package'
 dependencies: 
-  -token
-  -admin_toolbar:admin_toolbar
+  - drupal:token
+  - drupal:admin_toolbar:admin_toolbar
