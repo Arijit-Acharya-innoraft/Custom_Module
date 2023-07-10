@@ -10,6 +10,9 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class FirstForm extends FormBase {
   
+  /**
+   * {{@inheritdoc}}
+   */
   function getFormId() {
     return 'custom_form_id';
   }
