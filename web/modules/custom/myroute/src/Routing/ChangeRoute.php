@@ -6,26 +6,24 @@ use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
- * This class is used for implementing methods which would,
- *  alter routes and change permission.
+ * Implementing applications of routing.
  */
 class ChangeRoute extends RouteSubscriberBase {
 
   /**
-   * @param RouteCollection $collection
-   * 
-   * This method is used for,
-   * altering the routes and changing the permission.
+   * Method for changing the route provided in routing.yml file to another.
    */
   public function alterRoutes(RouteCollection $collection) {
-    $routeName = 'myroute.practicingRoute';
-    $route = $collection->get($routeName); 
+
+    $route_file_name = 'myroute.practicingRoute';
+    // Getting the route name of the routing.yml file.
+    $route = $collection->get($route_file_name);
+    $new_path = '/altered_route';
+    // Checking route presence for redirecting.
     if ($route) {
-      $route->setPath('/altered_route');
-      $route->setRequirement('_role','administrator');
+      $route->setPath($new_path);
+      $route->setRequirement('_role', 'administrator');
     }
   }
 
 }
-
-?>
