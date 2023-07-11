@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 class FirstForm extends FormBase {
 
   /**
-   * {{@inheritdoc}}
+   * {@inheritdoc}
    */
   public function getFormId() {
     return 'custom_form_id';
@@ -47,7 +47,11 @@ class FirstForm extends FormBase {
     $form['gender'] = [
       '#type' => 'radios',
       '#title' => $this->t('Gender'),
-      '#options' => ['Male' => ('Male'), 'Female' => ('Female'), 'Others' => ('Others')],
+      '#options' => [
+        'Male' => $this->t('Male'),
+        'Female' => $this->t('Female'),
+        'Others' => $this->t('Others'),
+      ],
     ];
 
     $form['submit'] = [
@@ -59,15 +63,15 @@ class FirstForm extends FormBase {
   }
 
   /**
-   * {{@inheritdoc}}
+   * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $publicDomains = [];
+    $public_domains = [];
     $email = $form_state->getValue('email');
-    $locAtTheRate = strrpos($email, "@") + 1;
-    $substring = substr($email, $locAtTheRate);
-    $locDot = strrpos($substring, ".");
-    $domainName = substr($substring, 0, $locDot);
+    $loc_at_the_rate = strrpos($email, "@") + 1;
+    $sub_string = substr($email, $loc_at_the_rate);
+    $loc_dot = strrpos($sub_string, ".");
+    $domain_name = substr($sub_string, 0, $loc_dot);
 
     // Validation of Full name.
     if (preg_match("/^[a-zA-Z]+$/", $form_state->getValue('full_name')) == FALSE) {
@@ -90,13 +94,13 @@ class FirstForm extends FormBase {
     if (!str_ends_with($form_state->getValue('email'), ".com")) {
       $form_state->setErrorByName('email', $this->t('You will be blacklisted'));
     }
-    if (!in_array($domainName, $publicDomains)) {
+    if (!in_array($domain_name, $public_domains)) {
       $form_state->setErrorByName('email', $this->t('Not in public domain'));
     }
   }
 
   /**
-   * {{@inheritdoc}}
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 

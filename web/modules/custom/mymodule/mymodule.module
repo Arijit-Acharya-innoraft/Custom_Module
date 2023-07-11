@@ -2,17 +2,13 @@
 
 /**
  * @file
+ * This file implements how to implement the hoook function.
  */
 
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * @file
- * This file implements how to implement the hoook function.
- */
-
-/**
- * Implements hook_cron.
+ * Implements hook_cron().
  */
 function mymodule_cron() {
   \Drupal::messenger()->addMessage(t("Hello World from mymodule  hook_cron"));

@@ -2,7 +2,4 @@ name: 'My Module'
 description: 'This is the first custom module.'
 type: module
 core_version_requirement: ^10
-dependencies:
-  - drupal:admin_toolbar:admin_toolbar
-  - drupal:token
 package: 'Custom package'
