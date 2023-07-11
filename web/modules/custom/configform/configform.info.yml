@@ -3,6 +3,3 @@ description: 'It contains the tasks of ticket FT2023-341, i.e,creating a configu
 type: 'module'
 core_version_requirement: ^10
 package: 'Custom package'
-dependencies: 
-  - drupal:token
-  - drupal:admin_toolbar:admin_toolbar

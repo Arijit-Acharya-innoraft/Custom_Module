@@ -90,12 +90,12 @@ class CustomConfigForm extends ConfigFormBase {
    *   The current state of the form.
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $publicDomains = ['gmail', 'yahoo', 'outlook'];
+    $public_domains = ['gmail', 'yahoo', 'outlook'];
     $email = $form_state->getValue('email');
-    $locAtTheRate = strrpos($email, "@") + 1;
-    $substring = substr($email, $locAtTheRate);
-    $locDot = strrpos($substring, ".");
-    $domainName = substr($substring, 0, $locDot);
+    $loc_at_the_rate = strrpos($email, "@") + 1;
+    $substring = substr($email, $loc_at_the_rate);
+    $loc_dot = strrpos($substring, ".");
+    $domain_name = substr($substring, 0, $loc_dot);
 
     // Validation of Full name.
     if (preg_match("/^[a-zA-Z]+$/", $form_state->getValue('full_name')) == FALSE) {
@@ -124,7 +124,7 @@ class CustomConfigForm extends ConfigFormBase {
       $form_state->setErrorByName('email', $this->t('You will be blacklisted'));
     }
     // Checking for public domains.
-    if (!in_array($domainName, $publicDomains)) {
+    if (!in_array($domain_name, $public_domains)) {
       $form_state->setErrorByName('email', $this->t('Not in public domain'));
     }
   }
