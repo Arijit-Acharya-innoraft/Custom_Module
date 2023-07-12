@@ -12,15 +12,13 @@ class BlockPage extends ControllerBase {
 
   /**
    * @return array
-   * Implements basic page written as hello world.
+   *   Implements basic page written as hello world.
    */
-  function pageDisplay() {
-   return[
-    '#type'=>'markup',
-    '#markup' => $this->t('Hello World!')
-   ];
+  public function pageDisplay() {
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Hello World!'),
+    ];
   }
 
 }
-
-?>

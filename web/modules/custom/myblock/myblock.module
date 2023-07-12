@@ -5,15 +5,14 @@
  * This is used for redirecting the user after login.
  */
 
-use Drupal\Core\Form\FormStateInterface ;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function myblock_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
-  if($form_id == 'user_login_form') {
+  if ($form_id == 'user_login_form') {
     $form['#submit'][] = '_myblock_user_login_form_submit';
   }
 
@@ -26,5 +25,3 @@ function _myblock_user_login_form_submit($form, FormStateInterface $form_state) 
   $request = \Drupal::service('request_stack')->getCurrentRequest();
   $request->query->set('destination', '/custom-welcome-page');
 }
-
-?>
