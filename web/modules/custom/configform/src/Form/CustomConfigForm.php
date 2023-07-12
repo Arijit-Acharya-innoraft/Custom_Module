@@ -62,7 +62,7 @@ class CustomConfigForm extends ConfigFormBase {
         'Female' => $this->t('Female'),
         'Others' => $this->t('Others'),
       ],
-      '#default_value' => $config->get('gender')[0],
+      '#default_value' => $config->get('gender'),
     ];
 
     $form['submit'] = [
