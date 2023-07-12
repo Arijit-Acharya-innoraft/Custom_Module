@@ -1,5 +1,5 @@
-name: 'Config Form'
+name: Config Form
 description: 'It contains the tasks of ticket FT2023-341, i.e,creating a configuration file.'  
-type: 'module'
+type: module
 core_version_requirement: ^10
-package: 'Custom package'
+package: Custom package

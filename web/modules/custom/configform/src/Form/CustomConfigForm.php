@@ -19,7 +19,7 @@ class CustomConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'configform.settings';
+    return 'configform_settings';
   }
 
   /**
@@ -32,15 +32,7 @@ class CustomConfigForm extends ConfigFormBase {
   }
 
   /**
-   * This method builds the form.
-   *
-   * @param array $form
-   *   An associative array containing the structure of the form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
-   *
-   * @return array
-   *   The form structure.
+   * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::CONFIGNAME);
@@ -82,12 +74,7 @@ class CustomConfigForm extends ConfigFormBase {
   }
 
   /**
-   * Method for validating the parameters.
-   *
-   * @param array $form
-   *   An associative array containing the structure of the form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
+   * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $public_domains = ['gmail', 'yahoo', 'outlook'];
@@ -130,12 +117,7 @@ class CustomConfigForm extends ConfigFormBase {
   }
 
   /**
-   * This method submits the form.
-   *
-   * @param array $form
-   *   An associative array containing the structure of the form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->config(static::CONFIGNAME);
