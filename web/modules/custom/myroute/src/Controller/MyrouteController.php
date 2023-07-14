@@ -3,8 +3,8 @@
 namespace Drupal\myroute\Controller;
 
 use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

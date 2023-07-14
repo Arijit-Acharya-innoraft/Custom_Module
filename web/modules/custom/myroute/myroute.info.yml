@@ -2,4 +2,4 @@ name: Route it
 description: 'Practicing the routing module'
 type: module
 core_version_requirement: ^10
-package: 'Custom Package '
+package: Custom Package
