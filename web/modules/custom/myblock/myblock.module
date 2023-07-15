@@ -8,12 +8,12 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_id_alter().
  */
 function myblock_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   if ($form_id == 'user_login_form') {
-    $form['#submit'][] = '_myblock_user_login_form_submit';
+    $form['#submit'][] = 'myblock_user_login_form_submit';
   }
 
 }
@@ -21,7 +21,7 @@ function myblock_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 /**
  * Custom submit handler for login form.
  */
-function _myblock_user_login_form_submit($form, FormStateInterface $form_state) {
+function myblock_user_login_form_submit($form, FormStateInterface $form_state) {
   $request = \Drupal::service('request_stack')->getCurrentRequest();
   $request->query->set('destination', '/custom-welcome-page');
 }
