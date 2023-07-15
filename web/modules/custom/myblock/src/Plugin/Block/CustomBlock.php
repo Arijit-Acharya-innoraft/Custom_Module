@@ -17,8 +17,7 @@ use Drupal\Core\Block\BlockBase;
 class CustomBlock extends BlockBase {
 
   /**
-   * @return array
-   *   Method to build the block.
+   * {@inheritdoc}
    */
   public function build() {
     // Fetching the current user role.

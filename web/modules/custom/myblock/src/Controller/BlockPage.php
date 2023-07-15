@@ -5,14 +5,15 @@ namespace Drupal\myblock\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * This implements a class for,
- *  creating a simple page where a block will be implemented.
+ * Class to create simple page where a block will be implemented.
  */
 class BlockPage extends ControllerBase {
 
   /**
+   * Implements basic page written as hello world.
+   *
    * @return array
-   *   Implements basic page written as hello world.
+   *   markup for the page.
    */
   public function pageDisplay() {
     return [
