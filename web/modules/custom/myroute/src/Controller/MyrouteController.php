@@ -2,10 +2,10 @@
 
 namespace Drupal\myroute\Controller;
 
-use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Session\AccountInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Defines a controller for the Myroute module.
@@ -46,25 +46,25 @@ class MyrouteController extends ControllerBase {
    */
   public function practicingRoute() {
     if ($this->account->hasPermission('view myroute')) {
-      AccessResult::Allowed();
       return [
         '#type' => 'markup',
         '#markup' => 'hello! route',
       ];
     }
-    AccessResult::Forbidden();
+    return new Response('Access Denied', 403);
   }
 
   /**
    * Displays the article number.
    *
-   * @param mixed $id
+   * @param string $id
    *   The ID of the article.
    *
    * @return array
    *   A render array containing the markup for the article number.
    */
   public function getArticleNo($id) {
+    
     return [
       '#type' => 'markup',
       '#markup' => $this->t('The Article Number is @id', [
