@@ -16,4 +16,3 @@ myroute.get_article_no:
   requirements:
     _permission: 'access content' 
     id: '^[0-9]+$'
-    
