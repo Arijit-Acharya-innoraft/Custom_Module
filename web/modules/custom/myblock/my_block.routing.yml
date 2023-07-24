@@ -1,4 +1,4 @@
-myblock.customblock:
+myblock.custom_block:
   path: '/custom-welcome-page'
   defaults:
     _controller: 'Drupal\myblock\Controller\BlockPage::pageDisplay'
