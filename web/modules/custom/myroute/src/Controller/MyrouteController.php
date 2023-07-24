@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class MyrouteController extends ControllerBase {
 
   /**
-   * The account object for the currently logged-in user.
+   * User Account Service.
    *
    * @var Drupal\Core\Session\AccountInterface
    */
@@ -64,7 +64,6 @@ class MyrouteController extends ControllerBase {
    *   A render array containing the markup for the article number.
    */
   public function getArticleNo($id) {
-    
     return [
       '#type' => 'markup',
       '#markup' => $this->t('The Article Number is @id', [

@@ -7,7 +7,6 @@ myroute.practicing_route:
     _permission: 'access custom page'
     _role: administrator + content_editor
 
-
 myroute.get_article_no:
   path: '/campaign/value/{id}'
   defaults:
