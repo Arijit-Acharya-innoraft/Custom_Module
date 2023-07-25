@@ -14,7 +14,6 @@ function myblock_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == 'user_login_form') {
     $form['#submit'][] = 'myblock_user_login_form_submit';
   }
-
 }
 
 /**
@@ -23,5 +22,4 @@ function myblock_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 function myblock_user_login_form_submit($form, FormStateInterface $form_state) {
   $request = \Drupal::service('request_stack')->getCurrentRequest();
   $request->query->set('destination', '/custom-welcome-page');
-  
 }
