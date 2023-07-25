@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\myblock\Plugin\Block;
+namespace Drupal\my_block\Plugin\Block;
 
 use Drupal\Component\Utility\Tags;
 use Drupal\Core\Block\BlockBase;

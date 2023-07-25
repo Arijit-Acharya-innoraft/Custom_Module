@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\myblock\Controller;
+namespace Drupal\my_block\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
