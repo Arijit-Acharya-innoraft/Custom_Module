@@ -7,4 +7,4 @@ access myblock:
 administer myblock:
   title: 'Access Myblock's settings.'
   description: 'Access the admin Myblock's setting page.'
-  restrict access: true
+  restrict access: TRUE
