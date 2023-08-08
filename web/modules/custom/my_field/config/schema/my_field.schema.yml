@@ -1,0 +1,11 @@
+field.storage.field_color_field:
+  type: sequence
+  label: 'Default value'
+  sequence:
+    - type: mapping
+      label: 'Default'
+      mapping:
+        value:
+          type: string
+          length: 10
+
