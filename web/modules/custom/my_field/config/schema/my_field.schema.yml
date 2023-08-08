@@ -1,4 +1,4 @@
-field.storage.field_color_field:
+field.field_color_field.value:
   type: sequence
   label: 'Default value'
   sequence:
