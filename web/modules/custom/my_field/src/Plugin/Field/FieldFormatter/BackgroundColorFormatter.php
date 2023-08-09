@@ -33,9 +33,6 @@ class BackgroundColorFormatter extends FormatterBase {
         '#tag' => 'div',
         '#value' => $color,
         '#attributes' => $attributes->toArray(),
-        // '#attributes'=>[
-          // 'style' => 'background-color: ' . $color . ';',
-        // ]
       ];
 
     }

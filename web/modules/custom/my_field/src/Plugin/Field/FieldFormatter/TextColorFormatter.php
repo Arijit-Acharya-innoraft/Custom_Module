@@ -31,13 +31,12 @@ class TextColorFormatter extends FormatterBase {
       // Storing that particuar entity.
       $entity = $item->getEntity();
       // Fetching that entity's body value.
-      $body_value = $entity->body->value;
       $attributes = new Attribute();
       $attributes->setAttribute('style', 'color: ' . $color);
       $elements[$delta] = [
         '#type' => 'html_tag',
         '#tag' => 'div',
-        '#value' => $body_value,
+        '#value' => $color,
         '#attributes' => $attributes->toArray(),
       ];
     }

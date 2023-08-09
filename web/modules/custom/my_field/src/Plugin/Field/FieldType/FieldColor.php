@@ -25,7 +25,7 @@ class FieldColor extends FieldItemBase {
    */
   public static function schema(FieldStorageDefinitionInterface $field_definition) {
 
-    // Columns contains thevalues that the field will store.
+    // Columns contains the values that the field will store.
     return [
       'columns' => [
         'hexcode' => [
@@ -52,7 +52,7 @@ class FieldColor extends FieldItemBase {
    */
   public function isEmpty() {
     $hexcode = $this->get('hexcode')->getValue();
-    return $hexcode === NULL || $hexcode === '';
+    return empty($hexcode);
   }
 
 }

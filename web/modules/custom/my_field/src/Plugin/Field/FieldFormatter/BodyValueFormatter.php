@@ -31,7 +31,10 @@ class BodyValueFormatter extends FormatterBase {
       // Storing that particuar entity.
       $entity = $item->getEntity();
       // Fetching that entity's body value.
-      $body_value = $entity->body->value;
+      if($entity->body->value)
+        $body_value = $entity->body->value;
+      else
+        $body_value = "There is either no body field or the value of the body field is empty";
       $attributes = new Attribute();
       $attributes->setAttribute('style', 'color: ' . $color);
       $elements[$delta] = [
