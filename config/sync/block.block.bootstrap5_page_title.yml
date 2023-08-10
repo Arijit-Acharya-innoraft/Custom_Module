@@ -1,15 +1,15 @@
-uuid: d0957dfe-261d-45e9-8546-3761016152c8
+uuid: 14508fc4-9cee-45b0-8084-786a70999888
 langcode: en-gb
 status: true
 dependencies:
   theme:
-    - olivero
+    - bootstrap5
 _core:
-  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
-id: olivero_page_title
-theme: olivero
-region: breadcrumb
-weight: -7
+  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+id: bootstrap5_page_title
+theme: bootstrap5
+region: content
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

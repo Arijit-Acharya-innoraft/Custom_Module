@@ -1,4 +1,4 @@
-uuid: d2b7af56-1794-435b-9c2b-332187e584ab
+uuid: 2749d071-ae39-47cb-aa14-91ecb1f68cb2
 langcode: en-gb
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - image
     - node
 _core:
-  default_config_hash: EymokncRIZ7SgQT2IdOQhQJicX4nNc0K89ik-LxmOHE
-id: node.field_image
-field_name: field_image
+  default_config_hash: YNUSvgge_V6tUlV2fAWXFCg7H_4rcUpbPIdLwDjw1z8
+id: node.field_movies_image
+field_name: field_movies_image
 entity_type: node
 type: image
 settings:
@@ -19,16 +19,14 @@ settings:
   uri_scheme: public
   default_image:
     uuid: ''
-    alt: ''
+    alt: 'Movie POster'
     title: ''
     width: null
     height: null
 module: image
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
-indexes:
-  target_id:
-    - target_id
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

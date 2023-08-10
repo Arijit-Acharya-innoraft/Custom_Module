@@ -1,0 +1,26 @@
+uuid: 90366057-6029-435a-902d-7fe4c739d1c7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.movies
+  module:
+    - text
+_core:
+  default_config_hash: QdWOR7_THlZGxDM8Tg79afu2EKkUwdl6IKkGOr557Go
+id: node.movies.body
+field_name: body
+entity_type: node
+bundle: movies
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
