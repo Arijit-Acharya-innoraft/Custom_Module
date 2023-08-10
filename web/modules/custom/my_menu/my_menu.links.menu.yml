@@ -14,4 +14,3 @@ my_menu.admin_menu_link:
   weight: 6
   route_name: my_menu.conf_form
   menu_name: admin
-  

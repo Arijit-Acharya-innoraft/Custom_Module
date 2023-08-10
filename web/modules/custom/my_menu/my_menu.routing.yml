@@ -33,5 +33,3 @@ my_menu.conf_form:
     _title: 'Fix Budget'
   requirements:
     _permission: 'admin_editor access'
-  
-  
