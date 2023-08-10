@@ -16,7 +16,7 @@ class AwardsListBuilder extends ConfigEntityListBuilder {
   public function buildHeader() {
     $header['label'] = $this->t('Award');
     $header['id'] = $this->t('Machine name');
-    $header['year'] =$this->t('year');
+    $header['year'] = $this->t('year');
     return $header + parent::buildHeader();
   }
 
@@ -28,7 +28,6 @@ class AwardsListBuilder extends ConfigEntityListBuilder {
     $row['id'] = $entity->id();
     $row['year'] = $entity->get('year');
     // You probably want a few more properties here...
-
     return $row + parent::buildRow($entity);
   }
 

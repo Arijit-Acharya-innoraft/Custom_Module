@@ -3,4 +3,3 @@ entity.awards.add_form:
   title: 'Add Award'
   appears_on:
     - entity.awards.collection
-    

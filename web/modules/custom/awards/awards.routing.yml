@@ -29,4 +29,3 @@ entity.awards.delete_form:
     _title: 'Delete Award'
   requirements:
     _permission: 'administer site configuration'
-    

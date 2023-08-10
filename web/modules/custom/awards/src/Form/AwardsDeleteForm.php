@@ -1,14 +1,14 @@
 <?php
+
 namespace Drupal\awards\Form;
 
 use Drupal\Core\Entity\EntityConfirmFormBase;
-use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Builds the form to delete an Example.
  */
-
 class AwardsDeleteForm extends EntityConfirmFormBase {
 
   /**

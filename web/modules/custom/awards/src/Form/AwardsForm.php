@@ -3,10 +3,9 @@
 namespace Drupal\awards\Form;
 
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\node\Entity\Node;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -14,14 +13,30 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class AwardsForm extends EntityForm {
 
- 
+
+  /**
+   * Stores entityTypeManager object.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   *   The entityTypeManager.
+   */
   protected $entityTypeManager;
+
+  /**
+   * Stores entityStorage object.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   *   The entityStorage.
+   */
   protected $entityStorage;
+
   /**
    * Constructs an AwardsForm object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entityTypeManager.
+   * @param \Drupal\Core\Entity\EntityStorageInterface $entityStorage
+   *   The entityStorage.
    */
   public function __construct(EntityTypeManagerInterface $entityTypeManager, EntityStorageInterface $entityStorage) {
     $this->entityTypeManager = $entityTypeManager;
@@ -45,7 +60,7 @@ class AwardsForm extends EntityForm {
     $form = parent::form($form, $form_state);
     $awards = $this->entity;
 
-    if($awards->get('movies')) {
+    if ($awards->get('movies')) {
       $node_id = $awards->get('movies')[0]['target_id'];
       $default_movie = $this->entityStorage->load($node_id);
       // $movie_name = ($node->getTitle());
@@ -70,18 +85,18 @@ class AwardsForm extends EntityForm {
     $form['year'] = [
       '#type' => 'date',
       '#title' => $this->t('Year'),
-      '#default_value' =>  $awards->get('year') ,
+      '#default_value' => $awards->get('year'),
       '#description' => $this->t("Year of the Awards."),
     ];
     $form['movies'] = [
-      '#type' =>'entity_autocomplete',
+      '#type' => 'entity_autocomplete',
       '#title' => 'Movie Name',
       '#target_type' => 'node',
-      '#default_value' => isset($default_movie) ? $default_movie : NULL ,
+      '#default_value' => $default_movie ?? NULL ,
       '#selection_settings' => ['target_bundle' => ['movies']],
       '#tags' => TRUE,
     ];
-    
+
     return $form;
   }
 

@@ -2,8 +2,8 @@
 
 namespace Drupal\awards\Entity;
 
-use Drupal\Core\Config\Entity\ConfigEntityBase;
 use Drupal\awards\AwardsInterface;
+use Drupal\Core\Config\Entity\ConfigEntityBase;
 
 /**
  * Defines the Award entity.
@@ -56,8 +56,8 @@ class Awards extends ConfigEntityBase implements AwardsInterface {
   protected $label;
 
   /**
-   * The award year
-   * 
+   * The award year.
+   *
    * @var date
    */
 
@@ -65,9 +65,9 @@ class Awards extends ConfigEntityBase implements AwardsInterface {
 
   /**
    * The awarded movie.
-   * 
+   *
    * @var string
    */
   protected $movies;
-  
+
 }
