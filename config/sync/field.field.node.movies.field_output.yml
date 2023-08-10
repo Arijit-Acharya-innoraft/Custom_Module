@@ -1,0 +1,19 @@
+uuid: d36fa3b7-e94d-4a9f-aa87-b538a03d9184
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_output
+    - node.type.movies
+id: node.movies.field_output
+field_name: field_output
+entity_type: node
+bundle: movies
+label: Output
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
