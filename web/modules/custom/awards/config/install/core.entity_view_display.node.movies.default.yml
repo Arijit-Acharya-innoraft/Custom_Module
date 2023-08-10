@@ -1,5 +1,4 @@
-uuid: be64fdb9-68d6-48d7-b3f8-c5953523c7ee
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,8 +10,6 @@ dependencies:
     - image
     - text
     - user
-_core:
-  default_config_hash: JO1ry9HTgnMSY9tcmluGIyP6dovGJJOOSorvH32sNUw
 id: node.movies.default
 targetEntityType: node
 bundle: movies
@@ -52,5 +49,4 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden:
-  langcode: true
+hidden: {  }

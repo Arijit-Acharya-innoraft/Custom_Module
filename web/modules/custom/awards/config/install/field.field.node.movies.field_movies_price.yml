@@ -1,12 +1,9 @@
-uuid: a2a5a29b-b40d-4843-a396-bdd8f07b1a22
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_movies_price
     - node.type.movies
-_core:
-  default_config_hash: '-W14n0BD3SrKPN5GSIwRFeLHf0Zz0wjTQmkXsNua6TU'
 id: node.movies.field_movies_price
 field_name: field_movies_price
 entity_type: node

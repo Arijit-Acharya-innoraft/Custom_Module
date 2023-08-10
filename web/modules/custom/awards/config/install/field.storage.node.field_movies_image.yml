@@ -1,13 +1,10 @@
-uuid: 6e46db73-2dbf-4dea-ad6b-11319deaca85
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
     - node
-_core:
-  default_config_hash: YNUSvgge_V6tUlV2fAWXFCg7H_4rcUpbPIdLwDjw1z8
 id: node.field_movies_image
 field_name: field_movies_image
 entity_type: node
