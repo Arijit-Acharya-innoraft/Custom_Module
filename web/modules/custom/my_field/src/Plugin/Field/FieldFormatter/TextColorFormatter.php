@@ -10,7 +10,7 @@ use Drupal\Core\Template\Attribute;
  * Plugin implementation of the 'text color' formatter.
  *
  * @FieldFormatter(
- *   id = "text_formatter",
+ *   id = "text_color_formatter",
  *   label = @Translation("Text color"),
  *   field_types = {
  *     "field_color"
@@ -28,8 +28,6 @@ class TextColorFormatter extends FormatterBase {
     foreach ($items as $delta => $item) {
       // Storing the color.
       $color = $item->hexcode;
-      // Storing that particuar entity.
-      $entity = $item->getEntity();
       // Fetching that entity's body value.
       $attributes = new Attribute();
       $attributes->setAttribute('style', 'color: ' . $color);

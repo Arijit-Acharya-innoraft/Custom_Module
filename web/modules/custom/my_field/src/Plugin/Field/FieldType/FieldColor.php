@@ -15,7 +15,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *  module = "my_field",
  *  description = @Translation("Demonstrate a field hexcode color picker"),
  *  default_widget = "hexcode_widget",
- *  default_formatter = "text_formatter"
+ *  default_formatter = "text_color_formatter"
  * )
  */
 class FieldColor extends FieldItemBase {
