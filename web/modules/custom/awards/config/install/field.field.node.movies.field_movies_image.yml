@@ -1,5 +1,4 @@
-uuid: 0b72024f-7842-45eb-8dc3-90276aa4772f
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.movies
   module:
     - image
-_core:
-  default_config_hash: wzNoNyWKUf4teuj0b21hobKE050aGgMfde71sRHmZWM
 id: node.movies.field_movies_image
 field_name: field_movies_image
 entity_type: node

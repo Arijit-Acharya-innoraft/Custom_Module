@@ -1,5 +1,4 @@
-uuid: 9d5e3922-e8fe-421b-9ca8-fe0683bf221b
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,13 +6,10 @@ dependencies:
     - field.field.node.movies.body
     - field.field.node.movies.field_movies_image
     - field.field.node.movies.field_movies_price
-    - field.field.node.movies.field_output
     - node.type.movies
   module:
     - text
     - user
-_core:
-  default_config_hash: ECLo20kd8SzN2Ot3ULthTUGn6UXKgC90Qh5cR9Gjns8
 id: node.movies.teaser
 targetEntityType: node
 bundle: movies
@@ -35,5 +31,3 @@ content:
 hidden:
   field_movies_image: true
   field_movies_price: true
-  field_output: true
-  langcode: true
